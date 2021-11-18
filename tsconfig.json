@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "outDir": "dist",
+    "declaration": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+
+    "lib": ["es2017"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "strict": false,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "skipLibCheck": true
+  }
+}

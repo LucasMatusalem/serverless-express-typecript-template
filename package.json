@@ -1,0 +1,40 @@
+{
+  "name": "serverless-express-ts-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "local": "cross-env NODE_ENV=development sls offline start --stage offline",
+    "deploy-prod": "cross-env NODE_ENV=production sls deploy --stage prod",
+    "remove-prod": "sls remove --stage prod",
+    "lint": "eslint --ext .js,.ts .",
+    "build-types": "tsc --noEmit --pretty",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "serverless-http": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.0.2",
+    "prettier": "^2.4.1",
+    "serverless": "^2.66.2",
+    "serverless-bundle": "^5.1.0",
+    "serverless-dotenv-plugin": "^3.10.0",
+    "serverless-offline": "^8.2.0",
+    "typescript": "^4.5.2"
+  }
+}

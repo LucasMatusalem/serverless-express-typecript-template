@@ -1,0 +1,38 @@
+service: service-name
+
+custom:
+  stage: ${opt:stage, 'offline'}
+  region: ${opt:region, 'sa-east-1'}
+  bundle:
+    linting: false
+  serverless-offline:
+    httpPort: 3333
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  memorySize: 512
+  timeout: 30
+  lambdaHashingVersion: 20201221
+  logs:
+    httpApi: true
+  httpApi:
+    cors: true
+    # metrics: true
+
+functions:
+  app:
+    handler: src/handler.handler
+    # reservedConcurrency: 100
+    events:
+      - httpApi:
+          path: '/{proxy+}'
+          method: '*'
+
+package:
+  individually: true
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-bundle
+  - serverless-offline
