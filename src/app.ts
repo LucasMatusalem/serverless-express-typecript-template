@@ -1,7 +1,7 @@
 import express from "express";
 import helmet from "helmet";
 
-import { router } from "./routes";
+import { router } from "./routes/index.routes";
 
 const app = express();
 

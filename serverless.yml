@@ -10,6 +10,7 @@ custom:
 
 provider:
   name: aws
+  profile: PUT AWS PROFILE
   runtime: nodejs14.x
   memorySize: 512
   timeout: 30
